@@ -30,22 +30,22 @@ public class ProdutoController {
 	    }
 	    
 	    @GetMapping
-	    public List<Produto> getAll() {
+	    public List<Produtos> getAll() {
 	        return service.findAll();
 	    }
 	    
 	    @GetMapping ("/{id}")
-	    public Optional<Produto> getById(@PathVariable Integer id) {
+	    public Optional<Produtos> getById(@PathVariable Integer id) {
 	        return service.findById(id);
 	    }
 	    
 	    @PostMapping
-	    public Produto create(@RequestBody Produto produtos) {
+	    public Produtos create(@RequestBody Produtos produtos) {
 	        return service.save(produtos);
 	    }
 
 	    @PutMapping("/{id}")
-	    public Produto update(@PathVariable Integer id, @RequestBody Produto produtos) {
+	    public Produtos update(@PathVariable Integer id, @RequestBody Produtos produtos) {
 	        produtos.setIdProdutos(id);
 	        return service.save(produtos);
 	    }

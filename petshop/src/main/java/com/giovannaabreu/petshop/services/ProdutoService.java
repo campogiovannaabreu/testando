@@ -19,15 +19,15 @@ public class ProdutoService {
 	        this.repository = repository;
 	    }
 	    
-	    public List<Produto> findAll() {
+	    public List<Produtos> findAll() {
 	        return repository.findAll();
 	    }
 	    
-	    public Optional<Produto> findById(Integer id) {
+	    public Optional<Produtos> findById(Integer id) {
 	        return repository.findById(id);
 	    }
 	    
-	    public Produto save(Produto produtos) {
+	    public Produtos save(Produtos produtos) {
 	        return repository.save(produtos);
 	    }
 	    
